@@ -6,6 +6,6 @@ defmodule ProducerTest do
   end
 
   test "putting something into kafka" do
-
+    assert {:ok, _acknowledgement} = Kafka.Producer.send_kafka_message("a message")
   end
 end
